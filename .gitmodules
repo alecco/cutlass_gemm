@@ -1,3 +1,6 @@
 [submodule "util"]
 	path = util
 	url = git@github.com:alecco/cuda_utils.git
+[submodule "cutlass"]
+	path = third_party/cutlass
+	url = git@github.com:NVIDIA/cutlass.git
