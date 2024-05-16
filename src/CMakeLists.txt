@@ -1,0 +1,6 @@
+add_executable(bench bench.cu)
+target_link_libraries(bench PRIVATE CUDA::cublas)
+set_target_properties(bench PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")
+if(TARGET CUDA::cublas)
+    target_compile_definitions(bench PRIVATE ENABLE_CUBLAS=1)
+endif()
